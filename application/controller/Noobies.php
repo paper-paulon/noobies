@@ -8,7 +8,7 @@
 			
 			preg_match('/[?]/', $action, $matches);				
 			if(count($matches)>0) $action = $this->default_action;
-			
+
 			if(method_exists($this, $action)){
 				$this->$action($params);
 			}else{
