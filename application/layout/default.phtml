@@ -2,20 +2,75 @@
 <html>
 <head>
 	<meta charset='utf-8' />
-	<title>Paperskeets :: Noobies</title>
-	<link rel="stylesheet" type="text/css" href="/programmer122013/paulon/public/css/bootstrap.min.css">
+	<title>Teamskeets :: Noobies</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_INDEX; ?>/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_INDEX; ?>/css/main.css">
+	<script type='text/javascript' src='<?php echo BASE_INDEX; ?>/js/jquery-1.10.2.min.js'></script>
+	<script type='text/javascript' src='<?php echo BASE_INDEX; ?>/js/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='<?php echo BASE_INDEX; ?>/js/bootstrap.min.js'></script>
+	
 </head>	
 <body>
-	
-	<div class='container'>
-	<header>Paperskeets Noobies</header>	
-		<div class='row'>
-			<div class='col-sm-12'>
-			<?php echo $content; ?>
+	<div id='bg'>
+		<div class='navbar navbar-default navbar-fixed-top'>
+			<div class='container'>
+				<div class='navbar-header'>
+					<a class='navbar-brand' href='<?php echo BASE_URL; ?><?php echo BASE_VERSION; ?>'>Teamskeets</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="<?php echo BASE_VERSION; ?>/noobies/girls">Models</a></li>
+						<li><a href="#">By Date</a></li>
+						<li><a href="#">Scenes</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sites <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Teamskeet</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Innocent High</a></li>
+								<li><a href="#">Solo Interview</a></li>							
+								<li><a href="#">Oyeloca</a></li>							
+								<li><a href="#">The Real Workout</a></li>
+								<li><a href="#">Her Fresh Man Year</a></li>
+								<li><a href="#">This Girl Sucks</a></li>
+								<li><a href="#">Titty Attack</a></li>
+								<li><a href="#">POV Love</a></li>
+								<li><a href="#">Self Desire</a></li>
+								<li><a href="#">Shes New</a></li>
+								<li><a href="#">Teeny Black</a></li>
+								<li><a href="#">Exxxtra Small</a></li>
+								<li><a href="#">Ruba Teen</a></li>
+								<li><a href="#">Teens Do Porn</a></li>
+								<li><a href="#">Step Siblings</a></li>
+								<li><a href="#">Teens Curve</a></li>
+								<li><a href="#">Lush HD</a></li>
+								<li><a href="#">BFF's</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+					<div class='nav navbar-nav navbar-right col-lg-3'>							
+						<div class="col-sm-12 pull-right" style='line-height:45px;'>
+								<div class="input-group-sm input-group">
+								<input type="text" class="form-control" placeholder='Search' style='border:1px solid #000;'>
+								<span class="input-group-btn">
+									<button style='top:0px; width:30px !important;' class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+								</span>
+							</div>
+						</div>					
+					</div>
+				</div>
+				
 			</div>
 		</div>
-	<footer>All Rights Reserved</footer>		
-	</div>
+		<div class='spacetop' style='height:60px;width:1px;'></div>
+		
+		<?php echo $content; ?>
+		
+		<div class='container'>		
+			<footer>All Rights Reserved</footer>		
+		</div>
+	</div>		
 	
 </body>
 </html>

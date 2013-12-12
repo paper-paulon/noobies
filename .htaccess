@@ -1,5 +1,6 @@
 RewriteEngine On
-RewriteBase /programmer122013/paulon
+#RewriteBase /programmer122013/paulon
+RewriteBase /v1
 
 # Remove PHPSESSID
 RewriteCond %{QUERY_STRING} PHPSESSID=.*$

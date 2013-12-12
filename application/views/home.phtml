@@ -1,0 +1,88 @@
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-9'>
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='width:855px; height:395px;'>
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<?php foreach($carousel_scenes as $k => $v): ?>
+					<li data-target="#carousel-example-generic" data-slide-to="<?php echo $k; ?>" <?php echo (($k==0)?"class='active'":""); ?>"></li>					
+					<?php endforeach; ?>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<?php foreach($carousel_scenes as $k => $v): ?>
+					<div class="item<?php echo ($k==0)?" active":""; ?>">
+						<img src="http://teamskeetimages.com/teamskeet/<?php echo $v['site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/members/preview/0<?php echo rand(1,$v['photo_preview_count']); ?>.jpg" alt="...">
+						<div class="carousel-caption">
+						<?php echo $v['episode_title']; ?>
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+		<div class='col-md-3'>
+			
+			<?php foreach($random_girls as $k => $v): ?>
+			<div class='row'>
+				<div class='col-md-12' style="z-index:1002">
+					<a href="#" class="top-girls">
+						<img height='187' width='256' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
+					</a>	
+					<span class='girls-info'>
+						<?php echo $v['girls_name']; ?>
+					</span>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('.carousel').carousel();
+			});
+		</script>
+	</div>
+	<span id='logo'><img width='400' height='180' src='http://teamskeetimages.com/design/tour/ts/main/ts_home_new.png' /></span>
+	<div class='row'>
+		<div class='col-md-12'>
+			<div class="page-header" style='background:#3F444A;'>
+				<h1>Teamskeet <small>the new era of porn sites</small></h1>
+			</div>
+			<div class='page-content'>
+				<div class='content'>
+					<?php foreach($content_scenes as $k => $v): ?>
+					<div class='scene-gallery'>
+						<span>
+							<img height='187' width='256' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/01.jpg" alt="...">
+						</span>
+						<span class='scene-info'>
+							<a href=""><?php echo $v['episode_title']; ?></a>
+						</span>
+					</div>
+					<?php endforeach; ?>
+				</div>
+				<div class='content-footer'>
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+	
+</div>

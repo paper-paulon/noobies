@@ -1,12 +1,20 @@
 <?php
 
 	error_reporting(E_ALL);
-
+	
+	defined('CONTROLLER_START') or define('CONTROLLER_START', 1);
+	defined('ACTION_START') or define('ACTION_START', 2);
+	defined('BASE_INDEX') or define('BASE_INDEX', '/v1/public');
+	defined('BASE_URL') or define('BASE_URL', 'http://paperskeetnoobie.local');
+	defined('BASE_VERSION') or define('BASE_VERSION','/v1');
+	
 	//require __DIR__ . '/../bootstrap/Autoload.php';
-
-	//$auto = new Autoload();	
+	//$auto = new Autoload();		
+	
+	
 	$path = dirname($_SERVER['PHP_SELF']);
 	$position = strrpos($path,'/') + 1;
+	
 	$root_folder = substr($path,$position);
 	$server_uri = $_SERVER['REQUEST_URI']; 
 	if (!isset($_SERVER['REQUEST_URI'])){
@@ -22,9 +30,9 @@
 	}
 	$myvar = trim($myvar,"/");
 	$parts = explode('/', $myvar); // Break into an array	
-	$page = (isset($parts[2])? filter_var($parts[2], FILTER_SANITIZE_STRING) : "noobies");
+	$page = (isset($parts[CONTROLLER_START])? filter_var($parts[CONTROLLER_START], FILTER_SANITIZE_STRING) : "noobies");
 	$params = array();
-	for($a=3; $a<count($parts); $a++){
+	for($a=ACTION_START; $a<count($parts); $a++){
 		$params[] = $parts[$a];
 	}
 
