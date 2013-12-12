@@ -8,10 +8,6 @@
 	defined('BASE_URL') or define('BASE_URL', 'http://paperskeetnoobie.local');
 	defined('BASE_VERSION') or define('BASE_VERSION','/v1');
 	
-	//require __DIR__ . '/../bootstrap/Autoload.php';
-	//$auto = new Autoload();		
-	
-	
 	$path = dirname($_SERVER['PHP_SELF']);
 	$position = strrpos($path,'/') + 1;
 	
