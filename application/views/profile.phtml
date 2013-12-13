@@ -1,0 +1,28 @@
+<div class='container'>	
+	<!--span id='logo'><img width='400' height='180' src='http://teamskeetimages.com/design/tour/ts/main/ts_home_new.png' /></span-->
+	<div class='row'>
+		<div class='col-md-12'>
+			<div class="page-header" style='background:#3F444A;'>
+				<h1><?php echo urldecode($data[0]['girls_name']); ?></h1>
+			</div>
+			<div class='page-content'>
+				<div class='content'>
+					<div class='content-left'>
+						<span><img data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $data[0]['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($data[0]['girls_name'])); ?>/shared/main_girls.jpg" alt="..."></span>
+					</div>
+					<div class='content-right'>
+						<span>Location :<?php echo $data[0]['birth_location']; ?></span>
+						<span>Vital :<?php echo $data[0]['measurements']; ?></span>
+						<span>Height :<?php echo $data[0]['height']; ?></span>
+						<span>Weight :<?php echo $data[0]['weight']; ?></span>
+						<span>Ethicity :<?php echo $data[0]['ethicity']; ?></span>
+						<span>Tattos :<?php echo $data[0]['tattos']; ?></span>
+						<span>Piercings :<?php echo $data[0]['piercings']; ?></span>
+					</div>
+					<div class='clear'></div>
+				</div>				
+			</div>			
+		</div>
+	</div>
+	
+</div>

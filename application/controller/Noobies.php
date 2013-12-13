@@ -37,8 +37,8 @@
 			$this->view['content_girls'] = Girls::getRandom(20);
 		}
 		public function profile($params){
-			
-			$this->view['data'] = $params[1];
+			include __DIR__ . "/../model/Girls.php";
+			$this->view['data'] = Girls::getProfileByName(urldecode($params[1]));
 		}
 		public function __destruct(){			
 			$content = $this->_loadView($this->view, true);

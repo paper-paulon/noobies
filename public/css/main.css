@@ -69,7 +69,14 @@ footer{
 }
 .content{
 	padding:30px 10px 10px;
+	width:100%;
 }
+.content-left{ float:left; width:20%; height:100% auto;min-height:100px;}
+.content-right{ float:left; width:80%; background:#474545; height:100% auto; min-height:100px; text-align:left; padding:20px; }
+.content-left span{padding:10px; display:block;}
+.content-right span{font-size:18px; color :#fff; display:block; padding:5px;}
+
+.clear{clear:both;}
 .content-footer{ padding:0 10px;}
 ul.pagination{margin:0 5px 10px;}
 .girl-gallery, .scene-gallery{

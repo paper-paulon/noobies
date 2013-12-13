@@ -12,6 +12,20 @@
 				return true;
 			}
 		}
+		public static function getProfileByName($name){
+			self::_buildConnection();
+			
+			$ret = array();	
+			if ($result = mysqli_query(self::$_conn, "SELECT * FROM girls where girls_name='{$name}';")) {
+				while($row = mysqli_fetch_assoc($result)){
+					$ret[] = $row;
+				}
+			}			
+			
+			mysqli_free_result($result);
+			mysqli_close(self::$_conn);
+			return $ret;
+		}
 		public static function getAll(){
 			self::_buildConnection();
 			
@@ -26,6 +40,7 @@
 			mysqli_close(self::$_conn);
 			return $ret;			
 		}
+		
 		public static function getRandom($limit = 0){
 			self::_buildConnection();
 			
