@@ -35,7 +35,7 @@
 			<?php foreach($random_girls as $k => $v): ?>
 			<div class='row'>
 				<div class='col-md-12' style="z-index:1002">
-					<a href="#" class="top-girls">
+					<a href="<?php echo BASE_URL . BASE_VERSION; ?>/noobies/profile/<?php echo urlencode($v['girls_name']); ?>/<?php echo $v['id']; ?>" class="top-girls">
 						<img height='187' width='250' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
 					</a>	
 					<span class='girls-info'>
@@ -65,7 +65,7 @@
 							<img height='187' width='256' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/01.jpg" alt="...">
 						</span>
 						<span class='scene-info'>
-							<a href=""><?php echo $v['episode_title']; ?></a>
+							<a href="<?php echo BASE_URL . BASE_VERSION; ?>/noobies/profile/<?php echo urlencode($v['girls_name']); ?>/<?php echo $v['id']; ?>"><?php echo $v['episode_title']; ?></a>
 						</span>
 					</div>
 					<?php endforeach; ?>
@@ -74,10 +74,6 @@
 					<ul class="pagination">
 						<li><a href="#">&laquo;</a></li>
 						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
 						<li><a href="#">&raquo;</a></li>
 					</ul>
 				</div>

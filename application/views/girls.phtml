@@ -34,7 +34,7 @@
 			<?php foreach($random_girls as $k => $v): ?>
 			<div class='row'>
 				<div class='col-md-12' style="z-index:1002">
-					<a href="#" class="top-girls">
+					<a href="<?php echo BASE_URL . BASE_VERSION; ?>/noobies/profile/<?php echo urlencode($v['girls_name']); ?>/<?php echo $v['id']; ?>" class="top-girls">
 						<img height='187' width='250' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
 					</a>	
 					<span class='girls-info'>
@@ -54,7 +54,7 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div class="page-header" style='background:#3F444A;'>
-				<h1>Search By: <small>Random Model</small></h1>
+				<h1>Search By: <small><?php echo (trim($search_by) != "")?$search_by:"Random Girls"; ?></small></h1>
 			</div>
 			<div class='page-content'>
 				<div class='content'>
@@ -81,10 +81,6 @@
 					<ul class="pagination">
 						<li><a href="#">&laquo;</a></li>
 						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
 						<li><a href="#">&raquo;</a></li>
 					</ul>
 				</div>

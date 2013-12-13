@@ -12,6 +12,49 @@
 				return true;
 			}
 		}
+		
+		public static function getByTags($qstr){
+			self::_buildConnection();
+			
+			$ret = array();						
+			if ($result = mysqli_query(self::$_conn,$qstr)) {
+				while($row = mysqli_fetch_assoc($result)){
+					$ret[] = $row;
+				}
+			}			
+			
+			mysqli_free_result($result);
+			mysqli_close(self::$_conn);
+			return $ret;
+		}
+		public static function getBySites($qstr){
+			self::_buildConnection();
+			
+			$ret = array();						
+			if ($result = mysqli_query(self::$_conn,$qstr)) {
+				while($row = mysqli_fetch_assoc($result)){
+					$ret[] = $row;
+				}
+			}			
+			
+			mysqli_free_result($result);
+			mysqli_close(self::$_conn);
+			return $ret;
+		}
+		public static function getByAlpha($qstr){
+			self::_buildConnection();
+			
+			$ret = array();						
+			if ($result = mysqli_query(self::$_conn,$qstr)) {
+				while($row = mysqli_fetch_assoc($result)){
+					$ret[] = $row;
+				}
+			}			
+			
+			mysqli_free_result($result);
+			mysqli_close(self::$_conn);
+			return $ret;
+		}
 		public static function getProfileByName($name){
 			self::_buildConnection();
 			
