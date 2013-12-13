@@ -1,7 +1,7 @@
 <div class='container'>
-	<div class='row'>
+	<div class='row'> 	
 		<div class='col-md-9'>
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='width:855px; height:395px;'>
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='width:855px; height:395px; background:#fff; padding: 3px;'>
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<?php foreach($carousel_scenes as $k => $v): ?>
@@ -30,13 +30,12 @@
 				</a>
 			</div>
 		</div>
-		<div class='col-md-3'>
-			
+		<div class='col-md-3'>	
 			<?php foreach($random_girls as $k => $v): ?>
 			<div class='row'>
 				<div class='col-md-12' style="z-index:1002">
 					<a href="#" class="top-girls">
-						<img height='187' width='256' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
+						<img height='187' width='250' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
 					</a>	
 					<span class='girls-info'>
 						<?php echo $v['girls_name']; ?>
@@ -55,7 +54,7 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div class="page-header" style='background:#3F444A;'>
-				<h1>Teamskeet <small>the new era of porn sites</small></h1>
+				<h1>Search By: <small>Random Model</small></h1>
 			</div>
 			<div class='page-content'>
 				<div class='content'>
@@ -65,14 +64,14 @@
 							<img data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/main_girls.jpg" alt="...">
 						</span>
 						<span class='girl-info'>
-							<a href=""><?php echo $v['girls_name']; ?></a>
-							<span>Location :<small><?php echo $v['birth_location']; ?></small></span>
-							<span>Vital :<small><?php echo $v['measurements']; ?></small></span>
-							<span>Height :<small><?php echo $v['height']; ?></small></span>
-							<span>Weight :<small><?php echo $v['weight']; ?></small></span>
-							<span>Ethicity :<small><?php echo $v['ethicity']; ?></small></span>
-							<span>Tattos :<small><?php echo $v['tattos']; ?></small></span>
-							<span>Piercings :<small><?php echo $v['piercings']; ?></small></span>
+							<a href="<?php echo BASE_URL . BASE_VERSION; ?>/noobies/profile/<?php echo urlencode($v['girls_name']); ?>/<?php echo $v['id']; ?>"><?php echo $v['girls_name']; ?></a>
+							<span><small>Location :</small><?php echo $v['birth_location']; ?></span>
+							<span><small>Vital :</small><?php echo $v['measurements']; ?></span>
+							<span>Height :</small><?php echo $v['height']; ?></span>
+							<span>Weight :</small><?php echo $v['weight']; ?></span>
+							<span>Ethicity :</small><?php echo $v['ethicity']; ?></span>
+							<span>Tattos :</small><?php echo $v['tattos']; ?></span>
+							<span>Piercings :</small><?php echo $v['piercings']; ?></span>
 							<a href="#">Number of Sites (<?php echo $v['sitecount']; ?>)</a>
 						</span>
 					</div>

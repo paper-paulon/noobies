@@ -36,6 +36,10 @@
 			$this->view['random_girls'] = Girls::getRandom(2);
 			$this->view['content_girls'] = Girls::getRandom(20);
 		}
+		public function profile($params){
+			
+			$this->view['data'] = $params[1];
+		}
 		public function __destruct(){			
 			$content = $this->_loadView($this->view, true);
 			include(__DIR__ . "/../layout/default.phtml");

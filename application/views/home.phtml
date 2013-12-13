@@ -1,7 +1,7 @@
 <div class='container'>
 	<div class='row'>
 		<div class='col-md-9'>
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='width:855px; height:395px;'>
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='width:855px; height:395px; background:#fff; padding: 3px;'>
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<?php foreach($carousel_scenes as $k => $v): ?>
@@ -36,7 +36,7 @@
 			<div class='row'>
 				<div class='col-md-12' style="z-index:1002">
 					<a href="#" class="top-girls">
-						<img height='187' width='256' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
+						<img height='187' width='250' data-src="holder.js/90%x180" src="http://teamskeetimages.com/teamskeet/<?php echo $v['primary_photo_site_abbr']; ?>/<?php echo preg_replace('/[ ]/', '_', strtolower($v['girls_name'])); ?>/shared/scenes/0<?php echo rand(1,5); ?>.jpg" alt="...">
 					</a>	
 					<span class='girls-info'>
 						<?php echo $v['girls_name']; ?>
@@ -55,7 +55,7 @@
 	<div class='row'>
 		<div class='col-md-12'>
 			<div class="page-header" style='background:#3F444A;'>
-				<h1>Teamskeet <small>the new era of porn sites</small></h1>
+				<h1>Search By: <small>Random Scenes</small></h1>
 			</div>
 			<div class='page-content'>
 				<div class='content'>

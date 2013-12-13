@@ -14,7 +14,7 @@ body{ background:#031F34 !important;}
 	width: 100%;
 }
 .container{
-	width:1170px !important;
+	width:1150px !important;
 }
 .top-girls{
 	padding:3px;
@@ -30,7 +30,7 @@ span.girls-info{
 	left: 18px;
 	padding: 5px 10px;
 	position: absolute;
-	width: 257px;
+	width: 250px;
 }
 .top-girls:hover .girls-info{display:none !important;}	
 
@@ -99,4 +99,13 @@ ul.pagination{margin:0 5px 10px;}
 	color:#057897;
 	display:block;
 }
-.girl-info span{ display:block;}
+.girl-info{ padding-top:10px; }
+.girl-info span{display:block;}
+
+.col-left, .col-right{
+	padding-left:0;
+	padding-right:0;
+	float:left;
+}
+.col-left{width:73%;}
+.col-right{width:27%; height:auto 100%;}
